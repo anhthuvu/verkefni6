@@ -1,8 +1,10 @@
 - name: Home
   link: /
-- name: About
-  link: /about.html
-- name: Blog
-  link: /blog.html
-- name: Staff
+- name: Biography
+  link: /biography.html
+- name: Favorite
+  link: /favorite.html
+- name: Album1
+  link: /album1.html
+- name: Composer
   link: /staff.html

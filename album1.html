@@ -1,0 +1,19 @@
+---
+layout: default
+title: Quasimodo's Gift
+---
+<header>
+	<h1>Quasimodo's Gift</h1>
+</header>
+<section class="content"> 
+	<h3>Quasimodo’s Gift is the debut album of Chinese singer Hua Chenyu. The international version was released on September 18, 2014</h3>
+
+	<ul>
+	  {% for post in site.posts %}
+	    <li>
+	      <h2><a href="{{ post.url | relative_url}}">{{ post.title }}</a></h2>
+	      <p>{{ post.excerpt }}</p>
+	    </li>
+	  {% endfor %}
+	</ul>
+</section>

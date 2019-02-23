@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Biography
 ---
 <!doctype html>
 <html>
@@ -9,6 +9,36 @@ title: Home
     <title>{{ page.title }}</title>
   </head>
   <body>
-    <h1>{{ "Hello World!" | downcase }}</h1>
+    <header class="col-2">
+      <div class="logo">
+        <img src="assets/images/vector.svg" width="200" height="250">
+      </div>
+      <div>
+        <h1>{{ "Hua Chen Yu" | upcase }}</h1>
+      </div>
+    </header>
+    <section class="content"> 
+      <ul>
+        <li>Hua Chenyu (华晨宇)</li>
+        <li>Born: February 7, 1990</li>
+        <li>Occupation: Singer, Songwriter, Composer</li>
+        <li>Genres: Mandopop, Rock,...</li>
+        <li>Instruments: Vocals, Piano, Flute, Guitar, Bass, Drums,...</li>
+        <li>He is also known as HuaHua (花花), is a Chinese singer and songwriter. He rose to fame after winning the 2013 Super Boy singing contest produced by Hunan TV, China. Hua is well known for his powerful vocals, dramatic stage performance and talents in composing. He is often recognized as one of the most influential singer-songwriters under 30 in China.</li>
+      </ul>
+    </section>
   </body>
+  <footer>
+    <dl> <!--Description list -->
+      <dt>Nafn</dt>
+        <dd>Anh Thu Vu</dd>
+      <dt>Tölvupóstur</dt>
+        <dd>18anhv0512@alfholsskoli.is</dd>
+      <dt>Áfangi og braut</dt>
+        <dd>VEFÞ1VG05AU, tölvubraut</dd>
+      <dt>Skóli</dt>
+        <dd>Upplýsingatækniskólinn</dd>
+    </dl>
+  </footer>
+  <p class="copy">&copy; 2018 </p>
 </html>
