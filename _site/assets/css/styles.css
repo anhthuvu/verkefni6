@@ -132,16 +132,16 @@ audio {
   body {
     margin: 0 auto; }
 
+  .logo {
+    padding-bottom: 2em; }
+
   .col-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2em;
     max-width: 60em;
     margin: 0 auto;
-    padding: 0; }
-    }
-  .logo {
-    padding-bottom: 2em; } }
+    padding: 0; } }
 @media screen and (min-width: 60em) {
   body {
     margin: 0 auto; }
