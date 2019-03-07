@@ -1,5 +1,15 @@
 <nav class="topnav">
   {% for item in site.data.navigation %}
-    <a href="{{ item.link | relative_url }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+  	{% if item.name == "Home" %}
+    	<a href="{{ item.link | relative_url }}" class="icon-home">{{ item.name }}</a>
+    {% elsif item.name == "Biography" %}
+    	<a href="{{ item.link | relative_url }}" class="icon-info">{{ item.name }}</a>
+    {% elsif item.name == "Favorite" %}
+    	<a href="{{ item.link | relative_url }}" class="icon-star-full">{{ item.name }}</a>
+    {% elsif item.name == "Album1" %}
+    	<a href="{{ item.link | relative_url }}" class="icon-music">{{ item.name }}</a>
+    {% elsif item.name == "Composer" %}
+    	<a href="{{ item.link | relative_url }}" class="icon-users">{{ item.name }}</a>
+    {% endif %}
   {% endfor %}
 </nav>
