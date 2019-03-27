@@ -1,5 +1,5 @@
 ---
-short_name: xl
+short_name: xilou
 name: Xi Lou
 position: Songwriter
 ---

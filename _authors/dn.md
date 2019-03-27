@@ -1,5 +1,5 @@
 ---
-short_name: dn
+short_name: dune
 name: Dúné
 position: Rock Band
 ---

@@ -9,22 +9,27 @@ title: Favorite
     <title>{{ page.title }}</title>
   </head>
   <body>
+    <nav class="topnav">
+      <a href="#fav">Favorite</a>
+      <a href="#vid">Video</a>
+      <a href="#mp3">Mp3</a>
+    </nav>
     <header>
       <h1>{{ "favorite" | upcase }}</h1>
     </header>
     <section class="content"> 
-      <h3>His favorite things</h3>
+      <h3 id="fav">His favorite things</h3>
       <ul class="col-3">
         <li>He is interested in anime and favourite anime is One Piece. Some of the other anime he likes are Assassination Classroom, Tokyo Ghoul, Naruto, Dragonball, One Punch Man, Attack on Titan, Gintama, and Pokemon. His favourite character in Naruto is Orochimaru. He has a lot of figurines at home and really likes Kaneki. He also has a Chopper plush, Chopper hat, Kaneki’s mask, Dragonball pouch and other things!</li>
         <li>His favourite color is red. In Hua Chenyu’s first ever public appearance on Hunan TV’s Superboy 2013 audition, Hua sang a self-written song with no words, only varied forms of humming. The media dubbed it “The Martian Language” and called Hua “The Martian Boy”, since “from Mars” is a common Chinese expression describing weird or inexplicable things. The name stuck and Hua later branded his concerts “Mars Concert”. The iron-rich rocks prevalent on Mars give the planet a reddish hue. And the Chinese word for Mars means “planet of fire” literally, so Mars is typically represented by the color red in Chinese culture. Red has been the theme color in most of Hua Chenyu’s artwork designs. Hua Chenyu’s fans call themselves Martians, or sometimes ET for short.</li>
         <li>Hua is also an avid tea drinker and loves playing snooker and Go in his spare time. He maintains a life style vaguely resembling that of an octogenarian’s where tea drinking, star gazing, zazen practice, playing Go with himself, staying in the bedroom for days without venturing out and the likes are the norm.</li>
       </ul>
-     	<h3> Video </h3>
+     	<h3 id="vid"> Video </h3>
       <div class="col-2">
         <p>In Episode 10 of Singer 2018, Hua Chenyu performed a soul-wrenching rendition of “Fake Monk” that incorporated snippets from his various lyric-less songs with a piano and his vocals as the only instruments. Hua dredged up painful memories of his extremely lonely childhood and laid bare his past demons in front of the audience. Throughout the years, Hua has written many, many songs in solitude, the majority of which he never intends to publish, deeming them too private or too dark for public consumption.</p>
         <iframe src="https://www.youtube.com/embed/6NBgcJxpI9M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
       </div>
-    	<h3> Mp3 </h3>
+    	<h3 id="mp3"> Mp3 </h3>
       <div class="col-2">
         <p>Hua Hua said The Giant Deer is the most favourite song he has written. It's the first song for his third solo album and it was released on June 23. The Giant Deer is the most beautiful song i have heard.</p>
       	<audio controls>
@@ -47,7 +52,7 @@ title: Favorite
   </footer>
   <div class="sMedia">
     <div>
-      <a href="https://facebook.com" title="facebook">
+      <a href="https://www.facebook.com/" title="facebook">
         <span class="icon-facebook2">
         </span>
       </a>

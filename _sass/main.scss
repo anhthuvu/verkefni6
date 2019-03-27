@@ -1,4 +1,4 @@
-*, *:before, *:after {
+ *:before, *:after {
   box-sizing: border-box; 
 }
 .topnav {
@@ -22,10 +22,11 @@ body {
 }
 .topnav {
 	padding-top: 1em;
-	display: block;
+	padding-bottom: 1em;
+	display: flex;
 	justify-content: center;
 }
-.topnav a {
+.topnav a, .topnav ul {
 	display: block;
 	color: white;
 	padding: 0 1em;
@@ -110,13 +111,81 @@ audio {
 	justify-items: center; 
 	padding-top: 3em;
 }
+blockquote {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}
+blockquote {
+    background-color: rgba(255,255,255,0.5);
+    padding: 1em;
+}
+input {
+  display: none;
+}
+label,
+.navbar ul {
+  border: 1px solid #cecfd5;
+  border-radius: 6px;
+}
+label {
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  padding: 5px 9px;
+  transition: all .15s ease;
+  top :0;
+}
+label:hover {
+  color: red;
+}
+input:checked + label {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+  color: #9799a7;
+}
+.navbar {
+  max-height: 0;
+  overflow: hidden;
+  transition: all .15s ease;
+}
+input:checked ~ .navbar {
+  max-height: 500px;
+}
+.navbar ul {
+  list-style: none;
+  margin: 8px 0 0 0;
+  width: 100px;
+}
+.navbar li {
+  border-bottom: 1px solid #cecfd5;
+}
+.navbar li:last-child {
+  border-bottom: 0;
+}
+.navbar a {
+  color: white;
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+}
+blockquote h3 {
+	text-align: center;
+	padding: 0;
+}
+
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?jvzstb');
-  src:  url('fonts/icomoon.eot?jvzstb#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?jvzstb') format('truetype'),
-    url('fonts/icomoon.woff?jvzstb') format('woff'),
-    url('fonts/icomoon.svg?jvzstb#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?iwposa');
+  src:  url('fonts/icomoon.eot?iwposa#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?iwposa') format('truetype'),
+    url('fonts/icomoon.woff?iwposa') format('woff'),
+    url('fonts/icomoon.svg?iwposa#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -145,6 +214,9 @@ audio {
 .icon-users:before {
   content: "\e972";
 }
+.icon-menu:before {
+  content: "\e9bd";
+}
 .icon-star-full:before {
   content: "\e9d9";
 }
@@ -163,6 +235,29 @@ audio {
 .icon-github:before {
   content: "\eab0";
 }
+.buttInput {
+	display: none;
+	overflow: visible;
+	font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+.buttLabel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+    border: 2px outset #999;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5em;
+    text-align: center;
+    padding: .07em .4em;
+    background-color: black;
+    transition: all .4s ease;
+    z-index: 999;
+}
 .sMedia a {
     margin: 0 0.65em;
     padding: 0;
@@ -171,13 +266,151 @@ audio {
     text-decoration: none;
     font-size: 1.75em;
 }
+@-webkit-keyframes cf4m {
+  0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes cf4m {
+ 0% {
+   opacity:1;
+ }
+ 17% {
+   opacity:1;
+ }
+ 25% {
+   opacity:0;
+ }
+ 92% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+@-o-keyframes cf4m{
+ 0% {
+   opacity:1;
+ }
+ 17% {
+   opacity:1;
+ }
+ 25% {
+   opacity:0;
+ }
+ 92% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+@keyframes cf4m {
+ 0% {
+   opacity:1;
+ }
+ 17% {
+   opacity:1;
+ }
+ 25% {
+   opacity:0;
+ }
+ 92% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+#cf4a {
+  position:relative;
+  height:380px;
+  width:230px;
+  margin:0 auto;
+}
+#cf4a img {
+  position:absolute;
+  left:0;
+  padding: 0;
+}
+
+#cf4a img {
+  -webkit-animation-name: cf4m;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 8s;
+
+  -moz-animation-name: cf4m;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: 8s;
+
+  -o-animation-name: cf4m;
+  -o-animation-timing-function: ease-in-out;
+  -o-animation-iteration-count: infinite;
+  -o-animation-duration: 8s;
+
+  animation-name: cf4m;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+}
+#cf4a img:nth-of-type(1) {
+  -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+  -o-animation-delay: 6s;
+  animation-delay: 6s;
+}
+#cf4a img:nth-of-type(2) {
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  -o-animation-delay: 4s;
+  animation-delay: 4s;
+}
+#cf4a img:nth-of-type(3) {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -o-animation-delay: 2s;
+  animation-delay: 2s;
+}
+#cf4a img:nth-of-type(4) {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay: 0;
+  animation-delay: 0;
+}
+
 @media screen and (min-width: 30em) {
 
 	body {  
 		margin: 0 auto;
 	}
 	.content li {
-	list-style-type: square;
+		list-style-type: square;
+	}
+
+}
+
+@media screen and (max-width: 37.5em) {
+
+	.topnav {
+		display: none;
 	}
 	.sMedia {
 		display: flex;
@@ -188,25 +421,13 @@ audio {
 		background-color: black;
 	}
 }
-
 @media screen and (min-width: 37.5em) {
 
 	
 	body {  
 		margin: 0 auto;
 	}
-	.topnav {
-		padding-top: 1em;
-		display: flex;
-		justify-content: center;
-	}
-	.topnav a {
-		display: block;
-		color: white;
-		text-decoration: none;
-		padding: 0 1em; 
-		text-transform: uppercase;
-	}
+
 	.content {
 		padding-left: 3.5em;
 		padding-right: 3em;
@@ -214,11 +435,17 @@ audio {
 	.sMedia {
 	    display: block;
 	    position: fixed;
-	    top: 5em;
-	    left: 1em;
+	    top: 7.7em;
 	    height: 10em;
 	    width: 2.5em;
 	    background-color: transparent;
+	}
+	#cf4a img {
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
+	.navbar, label.hidden {
+		display: none;
 	}
 
 }
@@ -236,6 +463,10 @@ audio {
 		max-width: 60em;
 		margin: 0 auto;
 		padding: 0;
+		padding-bottom: 1em;
+	}
+	#cf4a img {
+		padding-top: 2em;
 	}
 }
 

@@ -1,5 +1,5 @@
 ---
-short_name: tbv
+short_name: thebluevan
 name: The Blue Van
 position: Rock Band
 ---
