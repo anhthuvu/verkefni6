@@ -1,9 +1,13 @@
-- name: Home
+- name: Sign up
   link: /
+- name: Home
+  link: /home.html
 - name: Biography
   link: /biography.html
 - name: Favorite
   link: /favorite.html
+- name: Albums
+  link: /albums.html
 - name: Album1
   link: /album1.html
 - name: Composer

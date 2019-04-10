@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Sign up
 ---
 <!doctype html>
 <html>
@@ -9,40 +9,63 @@ title: Home
     <title>{{ page.title }}</title>
   </head>
   <body>
-
-    <header class="col-2">
-      <div class="logo">
-        <img src="assets/images/vector.svg" width="200" height="250">
-      </div>
+    <header>
       <div>
-        <h1>{{ "Hua Chen Yu" | upcase }}</h1>
+        <h1>{{ "Sign up" | upcase }}</h1>
       </div>
     </header>
     <section class="content"> 
-      <ul>
-        <li>Hua Chenyu (华晨宇)</li>
-        <li>Born: February 7, 1990</li>
-        <li>Occupation: Singer, Songwriter, Composer</li>
-        <li>Genres: Mandopop, Rock,...</li>
-        <li>Instruments: Vocals, Piano, Flute, Guitar, Bass, Drums,...</li>
-        <li>He is also known as HuaHua (花花), is a Chinese singer and songwriter. He rose to fame after winning the 2013 Super Boy singing contest produced by Hunan TV, China. Hua is well known for his powerful vocals, dramatic stage performance and talents in composing. He is often recognized as one of the most influential singer-songwriters under 30 in China.</li>
-      </ul>
-      <blockquote>
-        <h3> SAMSUNG GALAXY A9 STAR </h3>
-        <div class="col-2">
-          <div id="cf4a">
-            <img class="bottom" src="assets/images/pic1.jpeg" width="380" height="230">
-            <img class="top"src="assets/images/pic2.jpeg" width="380" height="230">
-            <img class="mid1" src="assets/images/pic3.jpeg" width="380" height="230">
-            <img class="mid2" src="assets/images/pic4.jpeg" width="380" height="230">
-          </div>
-          <div>
-            <p>The Galaxy A9 Star is a premium mid-range smartphone with a 6.3-inch FHD+ Infinity Display, a 2.2GHz processor with 4GB of RAM and 64GB of storage. It has a 24-megapixel + 16-megapixel dual camera system at the back in addition to a 16-megapixel selfie camera.</p>
-            <p>There’s a 3,700mAh battery as well. It’s also the first non-flagship smartphone from Samsung to get the full Bixby experience. Bixby Voice is onboard alongside Vision, Reminder and Home. It comes with a dedicated Bixby button as well like Samsung’s flagship smartphones.</p>
-            <p>These images of the Galaxy A9 Star show an eye-catching purple and pink gradient paint job for the device. It certainly makes the handset look unique and more striking compared to conventional color options.</p>
-          </div>
-        </div>       
-      </blockquote>   
+      <form action="/home.html">
+      <fieldset class="account-info">
+        <label>
+          Name
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Phone Number
+          <input type="number" name="phonenumber" required>
+        </label>
+        <label for="gender">
+          Gender<br>
+          <input type="radio" name="gender" value="male" checked> Male<br>
+          <input type="radio" name="gender" value="female"> Female<br>
+          <input type="radio" name="gender" value="other"> Other
+        </label>
+        <label>
+          Age
+          <select name="age">
+            <option value="0" selected></option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+          </select>
+        </label>
+        <label>
+          Date<br>
+          <input type="date" name="date" required>
+        </label>
+        <label>
+          Comment<br>
+          <textarea rows="4" name="comment"></textarea>
+        </label>
+      </fieldset>
+      <fieldset class="account-action">
+        <input class="btn" type="submit" name="submit" value="Sign up">s
+        <label>
+          <input type="checkbox" name="remember"> Stay signed up
+        </label>
+      </fieldset>
+    </form>
     </section>   
     <div class="sMedia">
       <div>
